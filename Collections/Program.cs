@@ -13,10 +13,22 @@ namespace Collections
             //ArrayList();
             //List();
             
+
+            Dictionary<string, string> dictioanry = new Dictionary<string, string>();
+            dictioanry.Add("Table","tablo");
+            dictioanry.Add("Computer", "Bilgisayar");
+            Console.WriteLine(dictioanry["Table"]);
+
+            foreach (var item in dictioanry)
+            {
+                Console.WriteLine(item.Value);
+            }
+            Console.WriteLine(dictioanry.ContainsKey("glass"));
             Console.ReadLine();
+
         }
-        
-        
+
+
         private static void ArrayList()
         {
             ArrayList cities = new ArrayList();
@@ -70,8 +82,8 @@ namespace Collections
             customers.Add(customer2);
             customers.AddRange(new Customer[2]
             {
-            new Customer{Id=4,FirstName="Ali"},
-            new Customer{Id=5,FirstName="Mehmet"}
+            new Customer{Id=4,FirstName="Sinemizu"},
+            new Customer{Id=5,FirstName="Emre"}
             });
 
 
