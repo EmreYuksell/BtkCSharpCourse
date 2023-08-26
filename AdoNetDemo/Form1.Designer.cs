@@ -113,6 +113,7 @@
             // gbxAdd
             // 
             this.gbxAdd.Controls.Add(this.tbxName);
+            this.gbxAdd.Controls.Add(this.btnAdd);
             this.gbxAdd.Controls.Add(this.lblStockAmounth);
             this.gbxAdd.Controls.Add(this.lblName);
             this.gbxAdd.Controls.Add(this.tbxStockAmounth);
@@ -120,14 +121,14 @@
             this.gbxAdd.Controls.Add(this.tbxUnitPrice);
             this.gbxAdd.Location = new System.Drawing.Point(26, 196);
             this.gbxAdd.Name = "gbxAdd";
-            this.gbxAdd.Size = new System.Drawing.Size(290, 175);
+            this.gbxAdd.Size = new System.Drawing.Size(291, 190);
             this.gbxAdd.TabIndex = 7;
             this.gbxAdd.TabStop = false;
             this.gbxAdd.Text = "Add a product";
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(138, 377);
+            this.btnAdd.Location = new System.Drawing.Point(112, 146);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 8;
@@ -137,7 +138,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(112, 146);
+            this.btnUpdate.Location = new System.Drawing.Point(46, 146);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 9;
@@ -147,6 +148,7 @@
             // 
             // gbxUpdate
             // 
+            this.gbxUpdate.Controls.Add(this.btnDelete);
             this.gbxUpdate.Controls.Add(this.tbxnameupdate);
             this.gbxUpdate.Controls.Add(this.btnUpdate);
             this.gbxUpdate.Controls.Add(this.label1);
@@ -211,7 +213,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(512, 35);
+            this.btnDelete.Location = new System.Drawing.Point(178, 146);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 11;
@@ -224,9 +226,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 445);
-            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.gbxUpdate);
-            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.gbxAdd);
             this.Controls.Add(this.dgwProducts);
             this.Name = "Form1";
