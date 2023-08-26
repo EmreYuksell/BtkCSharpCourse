@@ -68,5 +68,25 @@ namespace AdoNetDemo
             command.ExecuteNonQuery();
             _connection.Close();
         }
+        public void Update(Product product)
+        {
+            ConnectionControl();
+            SqlCommand command = new SqlCommand("Update Products set Name=@name,UnityPrice=@UnityPrice,StockAmount=@StockAmount where Id=@Id", _connection);
+            command.Parameters.AddWithValue("@Id", product.Id);
+            command.Parameters.AddWithValue("@Name", product.Name);
+            command.Parameters.AddWithValue("@StockAmount", product.StockAmount);
+            command.Parameters.AddWithValue("@UnityPrice", product.UnityPrice);
+            command.ExecuteNonQuery();
+            _connection.Close();
+        }
+        public void Delete(int Id)
+        {
+            ConnectionControl();
+            SqlCommand command = new SqlCommand("Delete from Products where Id=@Id", _connection);
+            command.Parameters.AddWithValue("@Id",Id);
+           
+            command.ExecuteNonQuery();
+            _connection.Close();
+        }
     }
 }
