@@ -21,6 +21,7 @@ namespace EntityFrameworkDemo
         {
             dgwProducts.DataSource = _productDal.GetAll();
         }
+       
 
         ProductDal _productDal = new ProductDal();
         private void Form1_Load(object sender, EventArgs e)
@@ -70,6 +71,16 @@ namespace EntityFrameworkDemo
 
             }); ;
             LoadProduct();
+        }
+        private void SearchProducts(string key)
+        {
+            //var result = _productDal.GetAll().Where(p =>p.Name.ToLower().Contains(key)).ToList();
+            var result = _productDal.GetByName(key);
+            dgwProducts.DataSource = result;
+        }
+        private void tbxSearch_TextChanged(object sender, EventArgs e)
+        {
+            SearchProducts(tbxSearch.Text);
         }
     }
     }
