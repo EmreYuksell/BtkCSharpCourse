@@ -59,6 +59,7 @@
             this.btnDelete.TabIndex = 11;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // tbxStockAmountUpdate
             // 
@@ -217,6 +218,7 @@
             this.dgwProducts.Name = "dgwProducts";
             this.dgwProducts.Size = new System.Drawing.Size(444, 150);
             this.dgwProducts.TabIndex = 11;
+            this.dgwProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwProducts_CellClick);
             // 
             // Form1
             // 
