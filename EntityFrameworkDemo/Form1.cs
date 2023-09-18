@@ -85,7 +85,7 @@ namespace EntityFrameworkDemo
 
         private void btxGetById_Click(object sender, EventArgs e)
         {
-            _productDal.GetById(1);
+            _productDal.GetById(Convert.ToInt32(tbxSearch.Text));
         }
     }
     }
